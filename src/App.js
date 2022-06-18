@@ -5,20 +5,9 @@ import { Component } from 'react';
 class App extends Component {
   constructor() {
     super();
-
     this.state =  {
       name: 'Lima',
     }
-  }
-
-  onChangeName(name) {
-    name = ''
-    this.setState.name = !name
-
-    // if(name) {
-    //   name = !name
-    // }
-    console.log(name)
   }
 
   render() {
@@ -29,7 +18,13 @@ class App extends Component {
           <p>
             {this.state.name}
           </p>
-          <button onClick={() => {this.setState({ name: 'Andrei' })}}>Change Name</button>
+          <button 
+              onClick={() => {
+                this.setState({name: 'Andrei'})
+              }}
+            >
+              Change Name
+            </button>
         </header>
       </div>
     );   
