@@ -6,8 +6,16 @@ class App extends Component {
   constructor() {
     super();
     this.state =  {
-      name: 'Lima',
-    }
+      name: {firstName: 'Guilherme', lastName: 'Lima'},
+      company: 'Google',
+    };
+  }
+
+  onChangeNameState = () => {
+    this.setState({
+      name: {firstName: 'Guilherme', lastName: 'Ytalo'},
+      company: 'ZTM',
+    }, () => { console.log(this.state) });
   }
 
   render() {
@@ -16,13 +24,10 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            {this.state.name}
+            Hi {this.state.name.firstName} {this.setState.name.lastName}, I work
+            at {this.state.company}
           </p>
-          <button 
-              onClick={() => {
-                this.setState({name: 'Andrei'})
-              }}
-            >
+          <button onClick={this.onChangeNameState}>
               Change Name
             </button>
         </header>
