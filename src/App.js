@@ -9,6 +9,10 @@ class App extends Component {
         {
           id: 1,
           name: "Linda",
+          name2: "Grubba",
+          dogs: {
+            name: "teste",
+          }
         },
         {
           id: 2,
