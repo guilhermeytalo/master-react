@@ -25,15 +25,12 @@ class App extends Component {
   }
 
   monsterName = (name) => {
-    console.log('tem name', name.target.value)
     const searchValue = name.target.value.toLocaleLowerCase();
-    const filteredMonster = this.state.monster.filter((monster) => {
-      return monster.name.toLocaleLowerCase().includes(searchValue);
-    });
+    const filteredMonster = this.state.monster.filter((monster) =>
+      monster.name.toLocaleLowerCase().includes(searchValue)
+    );
 
-    this.setState(() =>  {
-      return {monster: filteredMonster};
-    });
+    this.setState(() => {return { monster: filteredMonster }});
   };
 
   render() {
