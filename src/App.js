@@ -24,6 +24,18 @@ class App extends Component {
       );
   }
 
+  monsterName = (name) => {
+    console.log('tem name', name.target.value)
+    const searchValue = name.target.value.toLocaleLowerCase();
+    const filteredMonster = this.state.monster.filter((monster) => {
+      return monster.name.toLocaleLowerCase().includes(searchValue);
+    });
+
+    this.setState(() =>  {
+      return {monster: filteredMonster};
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -31,7 +43,7 @@ class App extends Component {
           className="search-box"
           type="search"
           placeholder="search monsters"
-          onChange={(e) => {console.log(e.target.value)}}
+          onChange={this.monsterName}
         />
         {this.state.monster.map((monster) => {
           return (
