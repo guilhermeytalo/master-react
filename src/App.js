@@ -17,22 +17,17 @@ class App extends Component {
                 this.setState(
                     () => {
                         return {monster: users};
-                    },
-                    () => {
-                        console.log(this.state);
                     }
                 )
             );
     }
 
     onSearchChange = (name) => {
-        console.log({startingArray: this.state.monster});
         const searchField = name.target.value.toLocaleLowerCase();
 
         this.setState(() => {
             return {searchField}
         }, () => {
-            console.log({endingArray: this.state.monster});
         });
     };
 
@@ -60,7 +55,7 @@ class App extends Component {
                         </div>
                     );
                 })}*/}
-                <CardList />
+                <CardList monsters={'im an a monster'}/>
             </div>
         );
     }
