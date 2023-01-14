@@ -47,7 +47,7 @@ class App extends Component {
                 <SearchBox
                     onChangeHandler={onSearchChange}
                     placeHolder='Search Monsters'
-                    className='search-box'
+                    className='monsters-search-box'
                 />
                 <CardList monsters={filteredMonster}/>
             </div>
