@@ -1,13 +1,14 @@
-import { Component } from 'react';
+import {Component} from 'react';
+
 class SearchBox extends Component {
     render() {
-        const { onSearchChange } = this.props;
+        const {className, placeHolder, onChangeHandler} = this.props;
         return (
             <input
-                className="search-box"
+                className={className}
                 type="search"
-                placeholder="search monsters"
-                onChange={onSearchChange}
+                placeholder={placeHolder}
+                onChange={onChangeHandler}
             />
         )
     }
